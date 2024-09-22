@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://assets.nflxext.com/ffe/siteui/vlv3/20bf1f4d-1c73-48fd-8689-310d6dd80efc/81bdc063-cb8f-4afe-8a02-a3131ca4ef5e/IN-en-20240812-POP_SIGNUP_TWO_WEEKS-perspective_WEB_7998f3b6-63e3-424a-8328-550cf777ddce_large.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .login-box h1 {
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .textbox {
+            margin-bottom: 20px;
+        }
+
+        .textbox input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #e50914;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .btn:hover {
+            background-color: #f40612;
+        }
+
+        .message {
+            font-size: 14px;
+        }
+
+        .message a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .message a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>ṇ
+<body>
+    <div class="login-box">
+        <h1>Sign In</h1>
+        <form action="https://www.netflix.com/login" method="post">
+            <div class="textbox">
+                <input type="email" placeholder="Email or Phone Number" name="email" required>
+            </div>
+            <div class="textbox">
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <input type="submit" class="btn" value="Sign In">
+            <p class="message">New to Netflix? <a href="#">Sign up now</a></p>
+            <p class="message"><a href="#">Forgot your password?</a></p>
+        </form>
+    </div>
+</body>
+</html>

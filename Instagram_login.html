@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .login-box {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background-color: #fafafa;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button.fb-login {
+            background-color: #4267b2;
+            margin-top: 15px;
+        }
+
+        button:disabled {
+            background-color: #b2dffc;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .divider hr {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #dbdbdb;
+            border: none;
+        }
+
+        .divider span {
+            margin: 0 10px;
+            color: #8e8e8e;
+            font-weight: bold;
+        }
+
+        .forgot-password {
+            display: block;
+            margin-top: 20px;
+            color: #00376b;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .signup-box {
+            text-align: center;
+            margin-top: 20px;
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #dbdbdb;
+        }
+
+        .signup-box a {
+            color: #0095f6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="https://static.cdninstagram.com/rsrc.php/v3/yM/r/8n91YnfPq0s.png" alt="Instagram Logo" class="logo" width="100">
+            <form id="login-form">
+                <input type="text" placeholder="Phone number, username, or email" id="username">
+                <input type="password" placeholder="Password" id="password">
+                <button type="submit" id="login-button">Log In</button>
+            </form>
+            <div class="divider">
+                <hr><span>OR</span><hr>
+            </div>
+            <button class="fb-login">Log in with Facebook</button>
+            <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        <div class="signup-box">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username && password) {
+                window.location.href = "https://www.instagram.com/accounts/login/";
+            } else {
+                alert("Please enter both username and password.");
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .login-box {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background-color: #fafafa;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button.fb-login {
+            background-color: #4267b2;
+            margin-top: 15px;
+        }
+
+        button:disabled {
+            background-color: #b2dffc;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .divider hr {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #dbdbdb;
+            border: none;
+        }
+
+        .divider span {
+            margin: 0 10px;
+            color: #8e8e8e;
+            font-weight: bold;
+        }
+
+        .forgot-password {
+            display: block;
+            margin-top: 20px;
+            color: #00376b;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .signup-box {
+            text-align: center;
+            margin-top: 20px;
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #dbdbdb;
+        }
+
+        .signup-box a {
+            color: #0095f6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="https://static.cdninstagram.com/rsrc.php/v3/yM/r/8n91YnfPq0s.png" alt="Instagram Logo" class="logo" width="100">
+            <form id="login-form">
+                <input type="text" placeholder="Phone number, username, or email" id="username">
+                <input type="password" placeholder="Password" id="password">
+                <button type="submit" id="login-button" onclick=href='https://www.instagram.com/'>Log In </button>
+            </form>
+            <div class="divider">
+                <hr><span>OR</span><hr>
+            </div>
+            <button class="fb-login">Log in with Facebook</button>
+            <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        <div class="signup-box">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username && password) {
+                alert("Logging in...");
+                // Here you would typically send the data to a server for authentication
+            } else {
+                alert("Please enter both username and password.");
+            }
+        });
+    </script>
+</body>
+</html> -->
